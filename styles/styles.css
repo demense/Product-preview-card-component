@@ -27,5 +27,32 @@ body {
     border-radius: var(--card-and-img-radius);
 }
 img.mobile {
-    border-radius: var(--card-and-img-radius);
+    border-radius: var(--card-and-img-radius) var(--card-and-img-radius) 0 0;
+}
+div.content {
+    padding: 31px 32px;
+}
+p.product-type {
+    font-family: "Montserrat", sans-serif;
+    color: var(--grey);
+    font-size: 0.725rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-bottom: 23px;
+}
+h1.product-name {
+    font-family: "Fraunces", serif;
+    line-height: 0.9;
+    font-weight: 700;
+    font-size: 2.25rem;
+    margin-bottom: 23px;
+
+}
+p.product-desc {
+    font-family: "Montserrat", sans-serif;
+    font-size: var(--paragraph);
+    font-weight: 500;
+    color: var(--grey);
+    line-height: 1.6;
+
 }
