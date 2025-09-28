@@ -99,3 +99,7 @@ button:hover {
     background-color: var(--green-700);
     cursor: pointer;
 }
+button:active {
+    background-color: var(--green-500);
+    /* cursor: pointer; */
+}
