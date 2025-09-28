@@ -1,105 +1,137 @@
 @font-face {
-    font-family: "Fraunces";
-    src: url(../assets/fonts/Fraunces-VariableFont.ttf);
+  font-family: "Fraunces";
+  src: url(../assets/fonts/Fraunces-VariableFont.ttf);
 }
 @font-face {
-    font-family: "Montserrat";
-    src: url(../assets/fonts/Montserrat-VariableFont.ttf);
+  font-family: "Montserrat";
+  src: url(../assets/fonts/Montserrat-VariableFont.ttf);
 }
 :root {
-    --green-500: hsl(158, 36%, 37%);
-    --green-700: hsl(158, 42%, 18%);
-    --black: hsl(212, 21%, 14%);
-    --grey: hsl(228, 12%, 48%);
-    --cream: hsl(30, 38%, 92%);
-    --paragraph: 0.875rem;
-    --card-and-img-radius: 8px;
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --paragraph: 0.875rem;
+  --card-and-img-radius: 10px;
 }
 body {
-    background-color: var(--cream);
-    display: flex;
-    justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
 }
 .card {
-    background-color: white;
-    width: 350px;
-    margin: 80px 0;
-    border-radius: var(--card-and-img-radius);
+  background-color: white;
+  width: 350px;
+  margin: 80px 0;
+  border-radius: var(--card-and-img-radius);
+}
+img.desktop {
+  display: none;
 }
 img.mobile {
-    border-radius: var(--card-and-img-radius) var(--card-and-img-radius) 0 0;
+  border-radius: var(--card-and-img-radius) var(--card-and-img-radius) 0 0;
 }
 div.content {
-    padding: 31px 32px;
+  padding: 31px 32px;
 }
 p.product-type {
-    font-family: "Montserrat", sans-serif;
-    color: var(--grey);
-    font-size: 0.725rem;
-    font-weight: 500;
-    letter-spacing: 5px;
-    margin-bottom: 23px;
+  color: var(--grey);
+  font-size: 0.725rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+  margin-bottom: 23px;
 }
 h1.product-name {
-    font-family: "Fraunces", serif;
-    line-height: 1;
-    font-weight: 700;
-    font-size: 2rem;
-    margin-bottom: 23px;
+  font-family: "Fraunces", serif;
+  line-height: 1;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 23px;
 }
 p.product-desc {
-    font-family: "Montserrat", sans-serif;
-    font-size: var(--paragraph);
-    font-weight: 500;
-    color: var(--grey);
-    line-height: 1.6;
-    margin-bottom: 15px;
+  font-size: var(--paragraph);
+  font-weight: 500;
+  color: var(--grey);
+  line-height: 1.6;
+  margin-bottom: 17px;
 }
 div.product-price {
-    display: flex;
-    align-items: center;
-    gap: 17px;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 15px;
 }
 p.price-after {
-    color: var(--green-500);
-    font-size: 2rem;
-    font-weight: 700;
-    font-family: "Fraunces", serif;
+  font-family: "Fraunces", serif;
+  color: var(--green-500);
+  font-size: 2rem;
+  font-weight: 700;
 }
 p.price-before {
-    color: var(--grey);
-    font-size: 0.75rem;
-    font-weight: 500;
-    font-family: "Montserrat", sans-serif;
-    text-decoration: line-through;
+  color: var(--grey);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: line-through;
 }
 button {
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: var(--paragraph);
-    background-color: var(--green-500);
-    width: 100%;
-    padding: 17px 0;
-    border-radius: 8px;
-    border: none;
-    line-height: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: var(--paragraph);
+  background-color: var(--green-500);
+  width: 100%;
+  padding: 17px 0;
+  border-radius: 8px;
+  border: none;
+  line-height: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 button::before {
-    content: url(../assets/images/icon-cart.svg);
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
+  content: url(../assets/images/icon-cart.svg);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 button:hover {
-    background-color: var(--green-700);
-    cursor: pointer;
+  background-color: var(--green-700);
+  cursor: pointer;
 }
 button:active {
-    background-color: var(--green-500);
-    /* cursor: pointer; */
+  background-color: var(--green-500);
+}
+@media (width > 630px) {
+  html, body {
+    height: 100%;
+  }
+  body {
+    align-items: center;
+  }
+  .card {
+    display: flex;
+    width: 600px;
+  }
+  img.mobile {
+    display: none;
+  }
+  img.desktop {
+    display: block;
+    width: 50%;
+    border-radius: var(--card-and-img-radius) 0 0 var(--card-and-img-radius);
+  }
+  p.product-type {
+    margin-bottom: 20px;
+  }
+  p.product-desc {
+    margin-bottom: 23px;
+  }
+  div.product-price {
+    margin-bottom: 22px;
+    gap: 20px;
+  }
+  button {
+    padding: 16px 0;
+    font-size: 0.88rem;
+  }
 }
